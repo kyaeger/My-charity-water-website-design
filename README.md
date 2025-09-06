@@ -1,1 +1,122 @@
-# My-charity-water-website-design
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>charity: water — Be the Generation That Ends the Water Crisis</title>
+  <style>
+    :root{
+      --yellow:#FFD300;
+      --black:#000000;
+      --white:#FFFFFF;
+      --gray:#F4F4F4;
+      --ink:#0A0A0A;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#fff; line-height:1.6}
+    img{max-width:100%; height:auto; display:block}
+    a{text-decoration:none; color:inherit}
+
+    .container{width:min(1150px, 92%); margin:auto}
+
+    header{position:sticky; top:0; background:#fff; border-bottom:1px solid #e9e9e9; z-index:50}
+    .nav{display:flex; justify-content:space-between; align-items:center; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:.65rem; font-weight:bold}
+    .brand img{width:32px; height:auto; display:block}
+
+    .menu{display:flex; gap:1rem; align-items:center; flex-wrap:wrap}
+    .menu a{padding:.55rem .8rem; border-radius:999px; font-weight:bold; font-size:.95rem}
+    .menu a:hover{background:var(--gray)}
+    .donate{background:var(--yellow); box-shadow:var(--shadow)}
+
+    .hero{background:linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.35)), url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1920&auto=format&fit=crop') center/cover; color:#fff; margin-bottom:0; display:flex; align-items:center;}
+    .hero-inner{padding:80px 0; display:flex; justify-content:center;}
+    .hero-card{background:rgba(0,0,0,.4); border-radius:var(--radius); padding:28px; max-width:720px; border:3px solid rgba(255,211,0,.65); text-align:center}
+    h1{font-weight:bold; line-height:1.2; font-size:clamp(1.8rem,4vw,2.4rem); margin:.5rem 0 1rem;}
+
+    .lead{font-size:1.05rem; max-width:60ch; margin:0 auto 1.2rem}
+    .btn{display:inline-block; padding:.9rem 1.2rem; border-radius:12px; font-weight:bold; transition:.2s}
+    .btn-primary{background:var(--yellow); color:#111}
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .cta{background:var(--yellow); border-radius:var(--radius); padding:18px 20px; box-shadow:var(--shadow); margin:20px auto 0; max-width:720px; text-align:center}
+    .cta p{margin:0; font-weight:bold}
+
+    .section{padding:60px 0}
+    .section h2{font-size:1.6rem; margin-bottom:1rem; font-weight:bold}
+
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:30px 30px; align-items:stretch}
+    .card{background:#fff; border:1px solid #ececec; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); display:flex; flex-direction:column; justify-content:center}
+    .card h3{font-weight:bold; font-size:1.25rem; line-height:1.4; margin:0 0 .75rem 0}
+    .card p{margin:0; color:#555; font-size:.95rem; line-height:1.5}
+
+    footer{padding:36px 0; border-top:1px solid #eee; margin-top:40px; color:#555}
+
+    section[id]{ scroll-margin-top: 80px; }
+    :focus-visible{ outline: 3px solid var(--yellow); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="https://www.evertrue.com/wp-content/uploads/2019/12/charity-water.png" alt="Charity: Water logo" />
+        charity: water
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#updates">Updates</a>
+        <a class="donate" href="#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-card">
+        <h1>Be the Generation That Ends the Water Crisis</h1>
+        <p class="lead">Your donation goes entirely to clean water projects. Even $5–$20 creates life-changing results.</p>
+        <a class="btn btn-primary" href="#donate">Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="about-impact">
+    <div class="two-col">
+      <h2>About the Crisis</h2>
+      <h2>Our Impact</h2>
+
+      <!-- Row 1 -->
+      <div class="card"><h3>Lack of Access</h3><p>771 million people still live without clean and safe drinking water today.</p></div>
+      <div class="card"><h3>Projects that Last</h3><p>We fund sustainable wells and community systems.</p></div>
+
+      <!-- Row 2 -->
+      <div class="card"><h3>Small Gifts Add Up</h3><p>Even $20 provides clean water for one person, showing how every donation counts.</p></div>
+      <div class="card"><h3>Transparent Updates</h3><p>Track projects with maps, photos, and reports.</p></div>
+
+      <!-- Row 3 -->
+      <div class="card"><h3>Lives Changed</h3><p>Over 15.5 million people have been served with clean water through our projects.</p></div>
+      <div class="card"><h3>Student Fundraising</h3><p>Host events or start a campaign—every action counts.</p></div>
+    </div>
+  </section>
+
+  <section id="donate" class="section" style="background:var(--gray)">
+    <div class="container">
+      <h2>Ready to Make Waves?</h2>
+      <p>Give once or pledge monthly. Your gift brings clean water to families worldwide.</p>
+      <a class="btn btn-primary" href="#">Donate $20</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <img src="https://www.evertrue.com/wp-content/uploads/2019/12/charity-water.png" alt="Charity: Water logo" style="width:24px; height:auto; vertical-align:middle; margin-right:6px;" />
+      © 2025 charity: water
+    </div>
+  </footer>
+</body>
+</html># My-charity-water-website-design
